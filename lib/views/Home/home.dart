@@ -3,7 +3,16 @@ import 'package:dcxy_flutter/components/NavItem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HomeState();
+  }
+}
+
+class HomeState extends State<Home> {
+  int _tabIndex = 0;
+
   Column buildIconMenu(String name, String label) {
     return Column(
       mainAxisSize: MainAxisSize.max,
@@ -85,6 +94,12 @@ class Home extends StatelessWidget {
             title: Text('我的'),
           ),
         ],
+        currentIndex: _tabIndex,
+        onTap: (index) {
+          setState(() {
+            _tabIndex = index;
+          });
+        },
       ),
     );
   }
