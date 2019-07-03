@@ -1,5 +1,5 @@
 import 'package:dcxy_flutter/theme/ThemeColors.dart';
-import 'package:dcxy_flutter/views/Home/home.dart';
+import 'package:dcxy_flutter/views/mainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       color: ThemeColors.defaultBackgroud,
       theme: ThemeData.light(),
-      home: Home(),
+      home: MainPage(),
     );
   }
 }
