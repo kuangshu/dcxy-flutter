@@ -2,7 +2,6 @@ import 'package:dcxy_flutter/views/Home/home.dart';
 import 'package:dcxy_flutter/views/My/my.dart';
 import 'package:flutter/material.dart';
 import 'package:dcxy_flutter/components/AppBar.dart' as custom;
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -17,7 +16,6 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
 
     return Scaffold(
       appBar: custom.AppBar(title: '多彩自助'),

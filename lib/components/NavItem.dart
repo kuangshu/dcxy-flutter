@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NavItem extends StatelessWidget {
   NavItem(this.icon, this.label);
@@ -13,19 +12,19 @@ class NavItem extends StatelessWidget {
       children: <Widget>[
         Image.asset(
           icon,
-          width: ScreenUtil.getInstance().setWidth(85),
-          height: ScreenUtil.getInstance().setHeight(90),
+          width: 85.0,
+          height: 90.0,
         ),
         Container(
-          width: ScreenUtil.getInstance().setWidth(120),
-          padding: EdgeInsets.only(top: 4),
+          width: 120.0,
+          padding: EdgeInsets.only(top: 4.0),
           child: Text(
             label,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color(0xFF000000),
-              fontSize: 13,
+              fontSize: 13.0,
               fontWeight: FontWeight.normal,
               decoration: TextDecoration.none,
             ),

@@ -1,6 +1,5 @@
 import 'package:dcxy_flutter/theme/ThemeColors.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppBar extends StatelessWidget implements PreferredSizeWidget {
   AppBar({@required this.title});
@@ -15,7 +14,7 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: ScreenUtil.getInstance().setHeight(128),
+        height: 128.0,
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
             begin: Alignment.centerLeft,
@@ -29,7 +28,7 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
               child: Text(
             title,
             style: TextStyle(
-              fontSize: ScreenUtil.getInstance().setSp(34),
+              fontSize: 34.0,
               color: ThemeColors.colorWhite,
             ),
           )),
