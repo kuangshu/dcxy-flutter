@@ -6,13 +6,16 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
 
   final String title;
 
+  // final double num = getAdapterRatioRatio();
+
   @override
   Size get preferredSize {
-    return new Size.fromHeight(56.0);
+    return new Size.fromHeight(128.0);
   }
 
   @override
   Widget build(BuildContext context) {
+    double top = MediaQuery.of(context).padding.top;
     return Container(
         height: 128.0,
         decoration: new BoxDecoration(
@@ -23,7 +26,7 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
         child: Container(
-          padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+          padding: EdgeInsets.only(top: top),
           child: Center(
               child: Text(
             title,

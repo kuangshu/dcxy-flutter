@@ -30,53 +30,40 @@ class Home extends StatelessWidget {
     );
   }
 
+  Widget buildScrollItem(context, viewportOffset) {
+    print('context: $context, viewportOffset: $viewportOffset');
+    return Image.asset(
+      'assets/home/banner-2@2x.png',
+      width: 750.0,
+      height: 260,
+      fit: BoxFit.cover,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-      children: <Widget>[
-        Image.asset(
-          'assets/home/banner-2@2x.png',
-          width: 750.0,
-          fit: BoxFit.cover,
-        ),
-        Container(
-          color: Color(0xFFFFFFFF),
-          margin: EdgeInsets.symmetric(horizontal: 0, vertical: 24.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              buildIconMenu('assets/home/hairDry@2x.png', '吹风'),
-              buildIconMenu('assets/home/hairDry@2x.png', '洗浴洗浴'),
-              buildIconMenu('assets/home/hairDry@2x.png', '洗浴洗浴洗浴'),
-              // buildIconMenu('assets/home/hairDry@2x.png', '洗浴'),
-            ],
+      child: Column(
+        children: <Widget>[
+          Scrollable(
+            axisDirection: AxisDirection.left,
+            viewportBuilder: buildScrollItem,
           ),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            Container(
-              width: 100,
-              color: Colors.yellow,
-              child: Text('100'),
+          Container(
+            color: Color(0xFFFFFFFF),
+            margin: EdgeInsets.symmetric(horizontal: 0, vertical: 24.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                buildIconMenu('assets/home/hairDry@2x.png', '吹风'),
+                buildIconMenu('assets/home/hairDry@2x.png', '洗浴洗浴'),
+                buildIconMenu('assets/home/hairDry@2x.png', '洗浴洗浴洗浴'),
+                // buildIconMenu('assets/home/hairDry@2x.png', '洗浴'),
+              ],
             ),
-            Container(
-              width: 100,
-              child: Text('100'),
-            ),
-            Container(
-              width: 100,
-              child: Text('100'),
-            ),
-            Container(
-              width: 75,
-              color: Colors.yellow,
-              child: Text('100'),
-            ),
-          ],
-        )
-      ],
-    ));
+          ),
+        ],
+      ),
+    );
   }
 }
