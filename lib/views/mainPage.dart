@@ -12,13 +12,15 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _tabIndex = 0;
-  final List<Widget> _children = [Home(), MyPage()];
+  final List<Widget> _children = [
+    Home(),
+    MyPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: custom.AppBar(title: '多彩自助'),
+      appBar: custom.AppBar(title: '首页'),
       body: IndexedStack(
         index: _tabIndex,
         children: _children,

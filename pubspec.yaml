@@ -36,7 +36,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/home/banner-1@2x.png
     - assets/home/banner-2@2x.png
+    - assets/home/banner-3@2x.png
     - assets/home/hairDry@2x.png
     - assets/buttomIcon/discover@2x.png
     - assets/buttomIcon/discover-selected@2x.png
